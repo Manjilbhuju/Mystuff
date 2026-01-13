@@ -10,8 +10,8 @@ result = [
   [0,0,0]
 ]
 
-for i in 0..x.length - 1
-  for j in 0..x[i].length - 1
+for i in 0...x.length
+  for j in 0...x[i].length
     result[j][i] = x[i][j]
   end
 end

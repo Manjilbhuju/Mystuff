@@ -236,15 +236,18 @@ arr = [
   7740, 8391, 4150, 5120, 6402, 8362, 5126, 7465, 3452, 9284
 ]
 
+arr_sorted = arr.sort
 
-for i in 0..arr.length
-  for j in 0..arr.length - i - 2
-    if arr[j] > arr[j+1]
+for i in 0...arr.length
+  for j in (i+1)...arr.length
+    if arr[i] > arr[j]
       temp = arr[j]
-      arr[j] = arr[j+1]
-      arr[j+1] = temp
+      arr[j] = arr[i]
+      arr[i] = temp
     end
   end
 end
 
-print (" \n #{arr}")
+puts " \n#{arr}"
+
+puts "Aarry is sorted #{arr == arr_sorted}"
